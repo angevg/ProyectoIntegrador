@@ -4,10 +4,11 @@
 	<meta charset="utf-8">
 	<title>Menu</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="/estilos.css">
+<link rel="stylesheet" type="text/css" href="css/estilos.css">
 <link rel="stylesheet" type="text/css" href="fonts.css">
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/jquery-3.5.0.min.js"></script>
 </head>
 <body>
 <header>
@@ -19,13 +20,14 @@
 
 	<nav>
 		<ul>
-
+	<li class="submenu">
+				<a href="index.php"><span class="icon-office"></span> Inicio</a>
+			</li>
 			<li class="submenu">
 
 				<a href="#"><span class="icon-folder-plus"></span> Mantenimiento <span class="caret icon-circle-down"></span> </a>
 				<ul class="children">
-				<li><a href="#"><span class="icon-user-plus"></span> Ingreso</a>
-				</li>
+				<li><a href="#"><span class="icon-user-plus"></span> Ingreso</a></li>
 				<li><a href="#"><span class="icon-user-check"></span> Egreso</a></li>		
 				</ul>
 			</li>
