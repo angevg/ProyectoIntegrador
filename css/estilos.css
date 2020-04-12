@@ -144,6 +144,7 @@ header nav ul li{
 	border-bottom: 1px solid rgba(255,255,255,.5);
 }
 
+
 header nav ul li a {
 
 	display: block;
@@ -152,6 +153,9 @@ header nav ul li a {
 header nav ul li:hover .children{
 	display: none;
 }
+
+
+
 header nav ul li .children {
 
 width: 100%;

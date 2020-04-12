@@ -88,8 +88,8 @@
      <label>Médico(a) responsable:</label> <input type="text" name="">
 
   </div>
-				<input type="submit" name="">
-				<input type="reset" name="">
+				<input type="submit" src="#" name="">
+				<input type="reset" src="#" name="">
 </div>
 
 </form>

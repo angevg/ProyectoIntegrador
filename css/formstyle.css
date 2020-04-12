@@ -9,9 +9,6 @@ font-size: 14px;
 					border-radius: 5px
 		}
 
-	
-
-
 
 		.programado-form h2 {
 			text-align: center;
@@ -111,7 +108,9 @@ width: 88%;
 					border-radius: 5px;
 
 }
-
+#n-registro{
+text-decoration: none;
+}
 	 input[type="submit"] {
 	 	margin-left:220px;
 border-radius: 5px;

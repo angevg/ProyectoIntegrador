@@ -27,8 +27,12 @@
 
 				<a href="#"><span class="icon-folder-plus"></span> Mantenimiento <span class="caret icon-circle-down"></span> </a>
 				<ul class="children">
-				<li><a href="#"><span class="icon-user-plus"></span> Ingreso</a></li>
-				<li><a href="#"><span class="icon-user-check"></span> Egreso</a></li>		
+				<li><a href="FormProgramado.php"><span class="icon-calendar"></span>Ingreso por Citas</a></li>
+				<li><a href="FormIntrahospitalario.php"><span class="icon-clipboard"></span>Ingreso Intrahospitalario</a></li>
+				<li><a href="FormEmergencia.php"><span class="icon-aid-kit"></span>Emegencias</a></li>	
+				<li><a href="FormEgreso.php"><span class="icon-user-check"></span> Egreso</a></li>	
+				<li><a href="FormTraslado.php"><span class="icon-upload"></span> Traslado</a></li>
+				<li><a href="FormDefuncion.php"><span class="icon-folder-upload"></span> Defuncion</a></li>				
 				</ul>
 			</li>
 
@@ -37,16 +41,24 @@
 			<li class="submenu">
 				<a href="#"><span class="icon-stats-bars"></span> Consultas <span class=" caret icon-circle-down"></span></a>
 					<ul class="children">
-				<li><a href="#"><span class="icon-user-plus"></span> Ingreso</a></li>
+				<li><a href="consulta.php"><span class="icon-calendar"></span>Ingreso por Citas</a></li>
+				<li><a href="#"><span class="icon-clipboard"></span>Ingreso Intrahospitalario</a></li>
+				<li><a href="#"><span class="icon-aid-kit"></span>Emegencias</a></li>	
 				<li><a href="#"><span class="icon-user-check"></span> Egreso</a></li>	
+				<li><a href="#"><span class="icon-upload"></span> Traslado</a></li>
+				<li><a href="#"><span class="icon-folder-upload"></span> Defuncion</a></li>	
 				</ul>
 			</li>
 
 			<li class="submenu">
 				<a href="#"><span class="icon-paste"></span> Reportes <span class=" caret icon-circle-down"></span></a>
 					<ul class="children">
-				<li><a href="#"><span class="icon-user-plus"></span> Ingreso</a></li>
-				<li><a href="#"><span class="icon-user-check"></span> Egreso</a></li>	
+				<li><a href="FormProgramado.php"><span class="icon-calendar"></span>Ingreso por Citas</a></li>
+				<li><a href="FormIntrahospitalario.php"><span class="icon-clipboard"></span>Ingreso Intrahospitalario</a></li>
+				<li><a href="FormEmergencia.php"><span class="icon-aid-kit"></span>Emegencias</a></li>	
+				<li><a href="FormEgreso.php"><span class="icon-user-check"></span> Egreso</a></li>	
+				<li><a href="FormTraslado.php"><span class="icon-upload"></span> Traslado</a></li>
+				<li><a href="FormDefuncion.php"><span class="icon-folder-upload"></span> Defuncion</a></li>	
 				</ul>
 			</li>
 

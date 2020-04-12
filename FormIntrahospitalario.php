@@ -16,6 +16,7 @@
 </head>
 <body>
 <header>
+		<!-- INICIO DEL MENU -->
 	<div class="menu_bar">
 		
 <a href="#" class="bt-menu"><span class="icon-menu"></span> Menu</a>
@@ -31,28 +32,44 @@
 
 				<a href="#"><span class="icon-folder-plus"></span> Mantenimiento <span class="caret icon-circle-down"></span> </a>
 				<ul class="children">
-				<li><a href="#"><span class="icon-user-plus"></span> Ingreso</a></li>
-				<li><a href="#"><span class="icon-user-check"></span> Egreso</a></li>		
+				<li><a href="FormProgramado.php"><span class="icon-calendar"></span>Ingreso por Citas</a></li>
+				<li><a href="FormIntrahospitalario.php"><span class="icon-clipboard"></span>Ingreso Intrahospitalario</a></li>
+				<li><a href="FormEmergencia.php"><span class="icon-aid-kit"></span>Emegencias</a></li>	
+				<li><a href="FormEgreso.php"><span class="icon-user-check"></span> Egreso</a></li>	
+				<li><a href="FormTraslado.php"><span class="icon-upload"></span> Traslado</a></li>
+				<li><a href="FormDefuncion.php"><span class="icon-folder-upload"></span> Defuncion</a></li>				
 				</ul>
 			</li>
+
+
 
 			<li class="submenu">
 				<a href="#"><span class="icon-stats-bars"></span> Consultas <span class=" caret icon-circle-down"></span></a>
 					<ul class="children">
-				<li><a href="#"><span class="icon-user-plus"></span> Ingreso</a></li>
+				<li><a href="consulta.php"><span class="icon-calendar"></span>Ingreso por Citas</a></li>
+				<li><a href="#"><span class="icon-clipboard"></span>Ingreso Intrahospitalario</a></li>
+				<li><a href="consultaEmergencia.php"><span class="icon-aid-kit"></span>Emegencias</a></li>	
 				<li><a href="#"><span class="icon-user-check"></span> Egreso</a></li>	
+				<li><a href="#"><span class="icon-upload"></span> Traslado</a></li>
+				<li><a href="#"><span class="icon-folder-upload"></span> Defuncion</a></li>	
 				</ul>
 			</li>
 
 			<li class="submenu">
 				<a href="#"><span class="icon-paste"></span> Reportes <span class=" caret icon-circle-down"></span></a>
 					<ul class="children">
-				<li><a href="#"><span class="icon-user-plus"></span> Ingreso</a></li>
-				<li><a href="#"><span class="icon-user-check"></span> Egreso</a></li>	
+				<li><a href="FormProgramado.php"><span class="icon-calendar"></span>Ingreso por Citas</a></li>
+				<li><a href="FormIntrahospitalario.php"><span class="icon-clipboard"></span>Ingreso Intrahospitalario</a></li>
+				<li><a href="FormEmergencia.php"><span class="icon-aid-kit"></span>Emegencias</a></li>	
+				<li><a href="FormEgreso.php"><span class="icon-user-check"></span> Egreso</a></li>	
+				<li><a href="FormTraslado.php"><span class="icon-upload"></span> Traslado</a></li>
+				<li><a href="FormDefuncion.php"><span class="icon-folder-upload"></span> Defuncion</a></li>	
 				</ul>
 			</li>
+
 		</ul>
 	</nav>
+	<!--FIN DEL MENU-->
 </header>
 
 <div class="programado-form">
@@ -61,14 +78,14 @@
 <h2>Ingreso intrahospitalario</h2>
 <div class="left">
   
-  <label>Nombre:</label> <input type="text" name="">
-   <label>Centro que lo refiere:</label> <input type="text" name="">
+  <label>Nombre:</label> <input type="text" name="nombre">
+   <label>Centro que lo refiere:</label> <input type="text" name="centro">
 <label>Sexo: </label>
- <div class="dr1"><label for=masculino> M</label><input class="rd" type="radio"  name="sexo" value="masculino"checked> </div>
+ <div class="dr1"><label for=masculino> M</label><input class="rd" type="radio"  name="sexo" value="M"checked> </div>
 	
-<div class="dr1"><label for=femenino> F</label><input class="rd" type="radio"  name="sexo" value="femenino"></div>
+<div class="dr1"><label for=femenino> F</label><input class="rd" type="radio"  name="sexo" value="F"></div>
 
-<label>Nacionalidad: <input type="text" name=""></label>
+<label>Nacionalidad: <input type="text" name="nacionalidad"></label>
 <label>Teléfono: <input type="number" name=""></label>
 	<label>Dirección: <input type="text" name=""></label>
 <label>Tipo de seguro:</label>
