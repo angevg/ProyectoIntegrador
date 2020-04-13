@@ -1,7 +1,7 @@
 <?php
 require 'conexion.php';
 $where ="";
-$sql = "SELECT * FROM tingresoprogramado";
+$sql = "SELECT * FROM tingresointrahospitalario";
 $resultado = $mysqli->query($sql);
 ?>
 
@@ -68,9 +68,9 @@ $resultado = $mysqli->query($sql);
 
 <div class="consulta-div">
 
-<h2>Consulta de Ingreso por Citas</h2>
+<h2>Consulta de Ingresos Intrahospitalarios</h2>
 
- <a style="padding: 10px; background: #435B4A; color: #FFFFFF; text-decoration: none; border-radius: 4px;" href="FormProgramado.php" id="n-registro"><span class="icon-plus"></span> Nuevo Registro</a>
+ <a style="padding: 10px; background: #435B4A; color: #FFFFFF; text-decoration: none; border-radius: 4px;" href="FormIntrahospitalario.php" id="n-registro"><span class="icon-plus"></span> Nuevo Registro</a>
 
 <div class="tb" align="center">
 
@@ -83,10 +83,10 @@ $resultado = $mysqli->query($sql);
 				<th>Sexo</th>
 				<th>Edad</th>
 				<th>Cedula</th>
-				<th>Tel.</th>
 				<th>Fecha de nacimiento</th>
 				<th>Tipo de seguro</th>
 				<th>N. Afiliado</th>
+				<th>Centro transferido</th>
 				<th>Contacto de Emergencia</th>
 				<th>Tel: de emergencia</th>
 				<th>Hora de ingreso</th>
@@ -100,23 +100,23 @@ $resultado = $mysqli->query($sql);
 	{ ?>
 
 <tr>
-		<td><?php echo $row['Id_programado']; ?></td>
-	<td><?php echo $row['P_nombre']; ?></td>
-	<td><?php echo $row['P_apellidos']; ?></td>
-	<td><?php echo $row['P_sexo']; ?></td>
-	<td><?php echo $row['P_edad']; ?></td>
-	<td><?php echo $row['P_cedula']; ?></td>
-	<td><?php echo $row['P_telefono']; ?></td>
-	<td><?php echo $row['P_fechaN']; ?></td>
-	<td><?php echo $row['P_tipoSeguro']; ?></td>
-	<td><?php echo $row['P_afiliadoNumero']; ?></td>
-	<td><?php echo $row['P_NombreE']; ?></td>
-	<td><?php echo $row['P_telefonoE']; ?></td>
-	<td><?php echo $row['P_horaI']; ?></td>
-	<td><?php echo $row['P_fechaI']; ?></td>
-					<td style="width:3%;"><a href="ModificarProgramado.php?Id_programado=<?php echo $row['Id_programado']; ?>"><span class="icon-pencil" style="color: #FFFFFF;"></span></a></td>
+	<td><?php echo $row['Id_intrahospitalario']; ?></td>
+	<td><?php echo $row['I_nombre']; ?></td>
+	<td><?php echo $row['I_apellidos']; ?></td>
+	<td><?php echo $row['I_sexo']; ?></td>
+	<td><?php echo $row['I_edad']; ?></td>
+	<td><?php echo $row['I_cedula']; ?></td>
+	<td><?php echo $row['I_fechaN']; ?></td>
+	<td><?php echo $row['I_tipoSeguro']; ?></td>
+	<td><?php echo $row['I_afiliadoNumero']; ?></td>
+	<td><?php echo $row['I_centro']; ?></td>
+	<td><?php echo $row['I_NombreE']; ?></td>
+	<td><?php echo $row['I_telefonoE']; ?></td>
+	<td><?php echo $row['I_horaI']; ?></td>
+	<td><?php echo $row['I_fechaI']; ?></td>
+					<td style="width:3%;"><a href="ModificarIntrahospitalario.php?Id_intrahospitalario=<?php echo $row['Id_intrahospitalario']; ?>"><span class="icon-pencil" style="color: #FFFFFF;"></span></a></td>
 
-				<td style="width:3%;"><a href="#" data-href="EliminarProgramado.php?Id_programado=<?php echo $row['Id_programado']; ?>"><span class="icon-bin" style="color: #FFFFFF;"></span></a></td>
+				<td style="width:3%;"><a href="#" data-href="EliminarProgramado.php?Id_intrahospitalario=<?php echo $row['Id_intrahospitalario']; ?>" data-toggle="modal" data-target="#confirm-delete"><span class="icon-bin" style="color: #FFFFFF;"></span></a></td>
 </tr>
 	<?php } ?>
 </tbody>

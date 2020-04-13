@@ -11,7 +11,7 @@ $resultado = $mysqli->query($sql);
 	<meta charset="utf-8">
 	  <meta name="theme-color" content="#000000">
   <meta name="author" content="Ana Angelica VG">
-	<title>Egreso</title>
+	<title>Consulta</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/estilos.css">
 <link rel="stylesheet" type="text/css" href="css/consultastyle.css">
@@ -68,9 +68,9 @@ $resultado = $mysqli->query($sql);
 
 <div class="consulta-div">
 
-<h2>Consulta de Egresados por Emergencia</h2>
+<h2>Consulta de Ingresados por Emergencia</h2>
 
- <a style="padding: 10px; background: #435B4A; color: #FFFFFF; text-decoration: none; border-radius: 4px;" href="FormProgramado.php" id="n-registro"><span class="icon-plus"></span> Nuevo Registro</a>
+ <a style="padding: 10px; background: #435B4A; color: #FFFFFF; text-decoration: none; border-radius: 4px;" href="FormEmergencia.php" id="n-registro"><span class="icon-plus"></span> Nuevo Registro</a>
 
 <div class="tb" align="center">
 

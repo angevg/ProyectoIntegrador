@@ -1,25 +1,29 @@
 <?php
 require 'conexion.php';
-
 $id = $_POST['id'];
+
 $nombre = $_POST['nombre'];
 $apellidos = $_POST['apellidos'];
 $sexo = $_POST['sexo'];
 $edad = $_POST['edad'];
 $cedula = $_POST['cedula'];
+$tel=$_POST['telefono'];
 $nacionalidad = $_POST['nacionalidad'];
-$telefono = $_POST['telefono'];
 $fechaN = $_POST['fecha-nacimiento'];
 $direccion = $_POST['direccion'];
 $seguro = isset($_POST['seguro']) ? $_POST['seguro'] :  null;
 $nAfiliado = isset($_POST['n-afiliado']) ? $_POST['n-afiliado'] : null;
+$centro = $_POST['centro'];
+$dr = $_POST['dr'];
+$diagnostico = $_POST['diagnostico'];
+$motivo = $_POST['m-traslado'];
+$estado = $_POST['estado'];
 $cEmergencia = $_POST['c-emergencia'];
 $tEmergencia = $_POST['t-emergencia'];
 $hora = $_POST['hora'];
-$fecha = $_POST['fecha'];
+$fecha = $_POST['fecha'];           
 
-
-$sql = "UPDATE tingresoprogramado SET P_nombre='$nombre', P_apellidos='$apellidos', P_sexo='$sexo', P_edad='$edad', P_cedula='$cedula', P_nacionalidad='$nacionalidad', P_telefono='$telefono', P_fechaN='$fechaN', P_direccion='$direccion', P_tipoSeguro='$seguro', P_afiliadoNumero='$nAfiliado', P_NombreE='$cEmergencia', P_telefonoE='$tEmergencia', P_horaI='$hora', P_fechaI='$fecha' WHERE Id_programado='$id'";                  
+$sql = "UPDATE tingresointrahospitalario SET I_nombre='$nombre', I_apellidos='$apellidos', I_sexo='$sexo', I_edad='$edad', I_nacionalidad='$nacionalidad', I_telefono='$tel', I_cedula='$cedula', I_fechaN='$fechaN', I_direccion='$direccion', I_tipoSeguro='$seguro', I_afiliadoNumero='$nAfiliado',I_centro='$centro', I_dr='$dr', I_diagnoticoI='$diagnostico', I_motivo='$motivo', I_estado='$estado', I_NombreE='$cEmergencia', I_telefonoE='$tEmergencia', I_horaI='$hora', I_fechaI='$fecha' WHERE Id_intrahospitalario='$id'";      
 $resultado = $mysqli->query($sql);
 ?>
 
@@ -50,7 +54,7 @@ if ($resultado) { ?>
 <?php } ?>
 
 
- <a style="padding: 10px; position: absolute; background: #07497B; color: #FFFFFF; text-decoration: none; border-radius: 4px;" href="Consulta.php" id="n-registro"><span class="icon-spinner11"></span> Regresar</a>
+ <a style="padding: 10px; position: absolute; background: #07497B; color: #FFFFFF; text-decoration: none; border-radius: 4px;" href="consultaIntrahospitalario.php" id="n-registro"><span class="icon-spinner11"></span> Regresar</a>
 
 </div>
 

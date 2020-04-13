@@ -49,7 +49,7 @@ if ($resultado) { ?>
 <?php } ?>
 
 
- <a style="padding: 10px; position: absolute; background: #07497B; color: #FFFFFF; text-decoration: none; border-radius: 4px;" href="ConsultaProgramado.php" id="n-registro"><span class="icon-spinner11"></span> Regresar</a>
+ <a style="padding: 10px; position: absolute; background: #07497B; color: #FFFFFF; text-decoration: none; border-radius: 4px;" href="Consulta.php" id="n-registro"><span class="icon-spinner11"></span> Regresar</a>
 
 </div>
 

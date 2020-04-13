@@ -13,13 +13,13 @@ $fechaN = $_POST['fecha-nacimiento'];
 $direccion = $_POST['direccion'];
 $seguro = isset($_POST['seguro']) ? $_POST['seguro'] :  null;
 $nAfiliado = isset($_POST['n-afiliado']) ? $_POST['n-afiliado'] : null;
+$diagnostico = $_POST['diagnostico'];
 $cEmergencia = $_POST['c-emergencia'];
 $tEmergencia = $_POST['t-emergencia'];
 $hora = $_POST['hora'];
-$fecha = $_POST['fecha'];
+$fecha = $_POST['fecha'];            
 
-
-$sql = "UPDATE tingresoprogramado SET P_nombre='$nombre', P_apellidos='$apellidos', P_sexo='$sexo', P_edad='$edad', P_cedula='$cedula', P_nacionalidad='$nacionalidad', P_telefono='$telefono', P_fechaN='$fechaN', P_direccion='$direccion', P_tipoSeguro='$seguro', P_afiliadoNumero='$nAfiliado', P_NombreE='$cEmergencia', P_telefonoE='$tEmergencia', P_horaI='$hora', P_fechaI='$fecha' WHERE Id_programado='$id'";                  
+$sql = "UPDATE tingresoemergencia SET E_nombre='$nombre', E_apellidos='$apellidos', E_sexo='$sexo', E_edad='$edad', E_nacionalidad='$nacionalidad', E_cedula='$cedula', E_telefono='$telefono', E_fechaN='$fechaN', E_direccion='$direccion', E_tipoSeguro='$seguro', E_afiliadoNumero='$nAfiliado', E_diagnoticoI='$diagnostico', E_NombreE='$cEmergencia', E_telefonoE='$tEmergencia', E_horaI='$hora', E_fechaI='$fecha' WHERE Id_emergencia='$id'";      
 $resultado = $mysqli->query($sql);
 ?>
 
@@ -50,7 +50,7 @@ if ($resultado) { ?>
 <?php } ?>
 
 
- <a style="padding: 10px; position: absolute; background: #07497B; color: #FFFFFF; text-decoration: none; border-radius: 4px;" href="Consulta.php" id="n-registro"><span class="icon-spinner11"></span> Regresar</a>
+ <a style="padding: 10px; position: absolute; background: #07497B; color: #FFFFFF; text-decoration: none; border-radius: 4px;" href="consultaEmergencia.php" id="n-registro"><span class="icon-spinner11"></span> Regresar</a>
 
 </div>
 

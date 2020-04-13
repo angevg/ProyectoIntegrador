@@ -1,3 +1,11 @@
+<?php
+require 'conexion.php';
+$id = $_GET['Id_emergencia'];
+$sql = "SELECT * FROM tingresoemergencia WHERE Id_emergencia ='$id' ";
+$resultado = $mysqli->query($sql);
+$row = $resultado->fetch_array(MYSQLI_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,7 +24,7 @@
 </head>
 <body>
 <header>
-	<!--INICIO DE MENU-->
+	<!-- INICIO DEL MENU -->
 	<div class="menu_bar">
 		
 <a href="#" class="bt-menu"><span class="icon-menu"></span> Menu</a>
@@ -69,42 +77,44 @@
 
 		</ul>
 	</nav>
-	<!--FIN DE MENU-->
+	<!--FIN DEL MENU-->
 </header>
 
 <div class="programado-form">
-<form action="guardarProgramado.php" method="POST">
+<form action="EditarEmergencia.php" method="POST">
 
-<h2>Ingreso por Citas</h2>
+<h2>Ingreso por emergencia</h2>
 <div class="left">
-  
-  <label>Nombre:</label> <input type="text" name="nombre">
- <label>Sexo: </label>
- <div class="dr1"><label for=M> M</label><input class="rd" type="radio"  name="sexo" value="M"> </div>
-	
-<div class="dr1"><label for=F> F</label><input class="rd" type="radio"  name="sexo" value="M"></div>
+    <input type="hidden" id="id" name="id" value="<?php echo $row['Id_emergencia']; ?>" required>
 
-<label>Nacionalidad: <input type="text" name="nacionalidad"></label>
-<label>Teléfono: <input type="number" name="telefono"></label>
-	<label>Dirección: <input type="text" name="direccion"></label>
+  <label>Nombre:</label> <input type="text" name="nombre" value="<?php echo $row['E_nombre'] ?>" required>
+ <label>Sexo: </label>
+ <div class="dr1"><label for=masculino> M</label><input class="rd" type="radio"  name="sexo" value="M"> </div>
+	
+<div class="dr1"><label for=femenino> F</label><input class="rd" type="radio"  name="sexo" value="F"></div>
+
+<label>Nacionalidad: <input type="text" name="nacionalidad" value="<?php echo $row['E_nacionalidad'] ?>" required></label>
+<label>Teléfono: <input type="number" name="telefono" value="<?php echo $row['E_telefono'] ?>" required></label>
+	<label>Dirección: <input type="text" name="direccion" value="<?php echo $row['E_direccion'] ?>" required></label>
 <label>Tipo de seguro:</label>
 
 <div class="dr1"><label for=ars> ARS</label><input class="rd" type="radio"  name="seguro" value="ARS"> </div>
 	
 <div class="dr1"><label for=privado> Privado</label><input class="rd" type="radio"  name="seguro" value="Privado"></div>
-<label>Hora de ingreso: <input class="date" type="time" name="hora"></label>
-  <label>Fecha de ingreso: <input class="date" type="date" name="fecha"></label>
+<label>Hora de ingreso: <input class="date" type="time" name="hora" value="<?php echo $row['E_horaI'] ?>" required></label>
+  <label>Fecha de ingreso: <input class="date" type="date" name="fecha" value="<?php echo $row['E_fechaI'] ?>" required></label>
   </div>
   
 
   <div class="right">
-    <label>Apellidos:</label> <input type="text" name="apellidos">
-    <label>Edad: <input type="number" name="edad"></label>
-  <label>Cédula: <input type="number" name="cedula"></label>
-	<label>Fecha de nacimiento: <input class="date" type="date" name="fecha-nacimiento"></label>
-<label>No. Afiliado: <input type="number" name="n-afiliado"></label>
-<label>Contacto de emergencia: <input type="text" name="c-emergencia"></label>
-<label>Teléfono emergencia: <input type="number" name="t-emergencia"></label>
+    <label>Apellidos:</label> <input type="text" name="apellidos" value="<?php echo $row['E_apellidos'] ?>" required>
+    <label>Edad: <input type="number" name="edad" value="<?php echo $row['E_edad'] ?>" required></label>
+  <label>Cédula: <input type="number" name="cedula" value="<?php echo $row['E_cedula'] ?>" required></label>
+	<label>Fecha de nacimiento: <input class="date" type="date" name="fecha-nacimiento" value="<?php echo $row['E_fechaN'] ?>" required></label>
+<label>No. Afiliado: <input type="number" name="n-afiliado" value="<?php echo $row['E_afiliadoNumero'] ?>" required></label>
+ <label>Diagnóstico de ingreso:</label> <input type="text" name="diagnostico" value="<?php echo $row['E_diagnoticoI'] ?>" required>
+<label>Contacto de emergencia: <input type="text" name="c-emergencia" value="<?php echo $row['E_NombreE'] ?>" required></label>
+<label>Teléfono emergencia: <input type="number" name="t-emergencia" value="<?php echo $row['E_telefonoE'] ?>" required></label>
   </div>
 				<input type="submit" name="">
 				<input type="reset" name="">
