@@ -71,10 +71,6 @@
 </header>
 <!--FIN de Menu -->
 <h1>Bienvenido</h1>
-<div style="text-align: center;">
-<form action='destruirsesion.php'>
-    <input type="submit" name="sesionDestroy" value="Cerrar sesion" style="color: #ffffff; background-color: #642727; border:none; padding: 15px; font-size: 20px; border-radius: 4px;" />
-</form>
-</div>
+
 </body>
 </html>
