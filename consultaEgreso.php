@@ -136,7 +136,7 @@ $resultado = $mysqli->query($sql);
 	<td><?php echo $row['Eg_medico']; ?></td>
 					<td style="width:3%;"><a href="modificarEgreso.php?Id_egreso=<?php echo $row['Id_egreso']; ?>"><span class="icon-pencil" style="color: #FFFFFF;"></span></a></td>
 
-				<td style="width:3%;"><a href="#" data-href="EliminarProgramado.php?Id_egreso=<?php echo $row['Id_egreso']; ?>" data-toggle="modal" data-target="#confirm-delete"><span class="icon-bin" style="color: #FFFFFF;"></span></a></td>
+				<td style="width:3%;"><a href="eliminarEgreso.php?Id_egreso=<?php echo $row['Id_egreso']; ?>"><span class="icon-bin" style="color: #FFFFFF;"></span></a></td>
 </tr>
 	<?php } ?>
 </tbody>

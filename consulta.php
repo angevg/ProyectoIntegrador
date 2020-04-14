@@ -152,5 +152,6 @@ $resultado = $mysqli->query($sql);
 	<?php } ?>
 </tbody>
 	</table>
+	
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli('localhost', 'root', '', 'hospital');
+$mysqli = new mysqli('localhost', 'root', '', 'hospital2');
 # if ($mysqli->connect_error) {
 
 #	die('error en la conexion' . $mysqli->connect_error);

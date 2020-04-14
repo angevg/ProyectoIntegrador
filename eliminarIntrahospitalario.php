@@ -1,18 +1,9 @@
 <?php
 require 'conexion.php';
-$where ="";
-if (!empty($_POST)) {
-$valor = $_POST['campo'];
 
-if (!empty($valor)) {
-	$where = "WHERE D_nombre LIKE '%$valor%'";
-}
-
-}
-
-
-
-$sql = "SELECT * FROM tdefuncion $where";
+$id = $_GET['Id_intrahospitalario'];
+$sql = "DELETE FROM tingresointrahospitalario WHERE Id_intrahospitalario ='$id'";
+                  
 $resultado = $mysqli->query($sql);
 ?>
 
@@ -22,10 +13,10 @@ $resultado = $mysqli->query($sql);
 	<meta charset="utf-8">
 	  <meta name="theme-color" content="#000000">
   <meta name="author" content="Ana Angelica VG">
-	<title>Consulta</title>
+	<title>Eliminar</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/estilos.css">
-<link rel="stylesheet" type="text/css" href="css/consultastyle.css">
+<link rel="stylesheet" type="text/css" href="css/formstyle.css">
 <link rel="stylesheet" type="text/css" href="fonts.css">
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<script src="js/main.js"></script>
@@ -93,51 +84,18 @@ $resultado = $mysqli->query($sql);
 </header>
 <!--FIN de Menu -->
 
-<div class="consulta-div">
+<div style="text-align: center;">
+<?php
+if ($resultado) { ?>
+<h2>Registro Eliminado</h2>
+<?php } else { ?>
+<h2>Error al Eliminar</h2>
+<?php } ?>
 
-<h2>Consulta de Defunción</h2>
 
- <a style="padding: 10px; background: #435B4A; color: #FFFFFF; text-decoration: none; border-radius: 4px;" href="listaEmergencia.php" id="n-registro"><span class="icon-plus"></span> Nuevo Registro</a>
+ <a style="padding: 10px; position: absolute; background: #07497B; color: #FFFFFF; text-decoration: none; border-radius: 4px;" href="consultaIntrahospitalario.php" id="n-registro"><span class="icon-spinner11"></span> Regresar</a>
 
- <div align="right">
-	<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
-		<B> Nombre: </B><input type="text" id="campo" name="campo" style="padding: 5px;border-radius: 4px;"  >
-		<input type="submit" name="" id="enviar"  name="enviar" value="Buscar" style="padding: 5px; background:#1B515F ; color: #FFFFFF; text-decoration: none; border:none; border-radius: 4px;" >
-	</form>
 </div>
 
-<div class="tb" align="center">
-
-	<table class="tbregistros" border="1" bgcolor="#17202A" cellspacing="0">
-		<thead>
-			<tr>
-				<th>ID</th>
-				<th>Nombre</th>
-				<th>Apellidos</th>
-				<th>Causa</th>
-				<th>Cirugias Practicadas</th>
-				<th>Dr. Responsable</th>
-				<th></th>
-				<th></th>
-			</tr>
-		</thead>
-<tbody>
-	<?php while($row = $resultado->fetch_array(MYSQLI_ASSOC)) 
-	{ ?>
-
-<tr>
-		<td><?php echo $row['Id_defuncion']; ?></td>
-	<td><?php echo $row['D_nombre']; ?></td>
-	<td><?php echo $row['D_apellidos']; ?></td>
-	<td><?php echo $row['D_causa']; ?></td>
-	<td><?php echo $row['D_cirugias']; ?></td>
-	<td><?php echo $row['D_medico']; ?></td>
-					<td style="width:3%;"><a href="modificarDefuncion.php?Id_defuncion=<?php echo $row['Id_defuncion']; ?>"><span class="icon-pencil" style="color: #FFFFFF;"></span></a></td>
-
-				<td style="width:3%;"><a href="EliminarDefuncion.php?Id_defuncion=<?php echo $row['Id_defuncion']; ?>"><span class="icon-bin" style="color: #FFFFFF;"></span></a></td>
-</tr>
-	<?php } ?>
-</tbody>
-	</table>
 </body>
 </html>

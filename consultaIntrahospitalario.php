@@ -146,7 +146,7 @@ $resultado = $mysqli->query($sql);
 	<td><?php echo $row['I_fechaI']; ?></td>
 					<td style="width:3%;"><a href="ModificarIntrahospitalario.php?Id_intrahospitalario=<?php echo $row['Id_intrahospitalario']; ?>"><span class="icon-pencil" style="color: #FFFFFF;"></span></a></td>
 
-				<td style="width:3%;"><a href="#" data-href="EliminarProgramado.php?Id_intrahospitalario=<?php echo $row['Id_intrahospitalario']; ?>" data-toggle="modal" data-target="#confirm-delete"><span class="icon-bin" style="color: #FFFFFF;"></span></a></td>
+				<td style="width:3%;"><a href="eliminarIntrahospitalario.php?Id_intrahospitalario=<?php echo $row['Id_intrahospitalario']; ?>" ><span class="icon-bin" style="color: #FFFFFF;"></span></a></td>
 </tr>
 	<?php } ?>
 </tbody>
