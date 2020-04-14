@@ -7,7 +7,7 @@
 			body{
 
 
-	  background-image: url("fondo.jpg");
+	  background-image: url("img/fondo.jpg");
 			}
 
 		.login-form {
