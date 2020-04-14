@@ -19,6 +19,7 @@ if ($nr ==1) {
 
 else if ($nr == 0) {
  echo "usuario incorrecto";
+ header("Location: login.php");
 }
 
 ?>
