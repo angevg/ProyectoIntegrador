@@ -1,7 +1,16 @@
 <?php
 require 'conexion.php';
 $where ="";
-$sql = "SELECT * FROM tingresoprogramado";
+
+if (!empty($_POST)) {
+$valor = $_POST['campo'];
+
+if (!empty($valor)) {
+	$where = "WHERE P_nombre LIKE '%$valor%'";
+}
+
+}
+$sql = "SELECT * FROM tingresoprogramado $where";
 $resultado = $mysqli->query($sql);
 ?>
 
@@ -72,6 +81,12 @@ $resultado = $mysqli->query($sql);
 
  <a style="padding: 10px; background: #435B4A; color: #FFFFFF; text-decoration: none; border-radius: 4px;" href="FormProgramado.php" id="n-registro"><span class="icon-plus"></span> Nuevo Registro</a>
 
+<div align="right">
+	<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+		<B> Nombre: </B><input type="text" id="campo" name="campo" style="padding: 5px;border-radius: 4px;"  >
+		<input type="submit" name="" id="enviar"  name="enviar" value="Buscar" style="padding: 5px; background:#1B515F ; color: #FFFFFF; text-decoration: none; border:none; border-radius: 4px;" >
+	</form>
+</div>
 <div class="tb" align="center">
 
 	<table class="tbregistros" border="1" bgcolor="#17202A" cellspacing="0">
@@ -116,7 +131,7 @@ $resultado = $mysqli->query($sql);
 	<td><?php echo $row['P_fechaI']; ?></td>
 					<td style="width:3%;"><a href="ModificarProgramado.php?Id_programado=<?php echo $row['Id_programado']; ?>"><span class="icon-pencil" style="color: #FFFFFF;"></span></a></td>
 
-				<td style="width:3%;"><a href="#" data-href="EliminarProgramado.php?Id_programado=<?php echo $row['Id_programado']; ?>"><span class="icon-bin" style="color: #FFFFFF;"></span></a></td>
+				<td style="width:3%;"><a href="EliminarProgramado.php?Id_programado=<?php echo $row['Id_programado']; ?>"><span class="icon-bin" style="color: #FFFFFF;"></span></a></td>
 </tr>
 	<?php } ?>
 </tbody>

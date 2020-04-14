@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://localhost/Proyecto%20Integrador/lista.php -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	  <meta name="theme-color" content="#000000">
+  <meta name="author" content="Ana Angelica VG">
+	<title>Consulta</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="./Consulta_files/estilos.css">
+<link rel="stylesheet" type="text/css" href="./Consulta_files/consultastyle.css">
+<link rel="stylesheet" type="text/css" href="./Consulta_files/fonts.css">
+	<script src="./Consulta_files/jquery-latest.js.descarga"></script>
+	<script src="./Consulta_files/main.js.descarga"></script>
+		<script src="./Consulta_files/jquery-3.5.0.min.js.descarga"></script>
+
+</head>
+<body>
+<header>
+	<!--Menu -->
+	<div class="menu_bar">
+		
+<a href="http://localhost/Proyecto%20Integrador/lista.php#" class="bt-menu"><span class="icon-menu"></span> Menu</a>
+
+	</div>
+
+	<nav>
+		<ul>
+			<li class="submenu">
+				<a href="http://localhost/Proyecto%20Integrador/index.php"><span class="icon-office"></span> Inicio</a>
+			</li>
+
+			<li class="submenu">
+
+				<a href="http://localhost/Proyecto%20Integrador/lista.php#"><span class="icon-folder-plus"></span> Mantenimiento <span class="caret icon-circle-down"></span> </a>
+				<ul class="children">
+				<li><a href="http://localhost/Proyecto%20Integrador/lista.php#"><span class="icon-user-plus"></span> Ingreso</a></li>
+				
+				<li><a href="http://localhost/Proyecto%20Integrador/lista.php#"><span class="icon-user-check"></span> Egreso</a></li>		
+				</ul>
+			</li>
+
+			<li class="submenu">
+				<a href="http://localhost/Proyecto%20Integrador/lista.php#"><span class="icon-stats-bars"></span> Consultas <span class=" caret icon-circle-down"></span></a>
+					<ul class="children">
+				<li><a href="http://localhost/Proyecto%20Integrador/lista.php#"><span class="icon-user-plus"></span> Ingreso</a></li>
+				<li><a href="http://localhost/Proyecto%20Integrador/lista.php#"><span class="icon-user-check"></span> Egreso</a></li>	
+				</ul>
+			</li>
+
+			<li class="submenu">
+				<a href="http://localhost/Proyecto%20Integrador/lista.php#"><span class="icon-paste"></span> Reportes <span class=" caret icon-circle-down"></span></a>
+					<ul class="children">
+				<li><a href="http://localhost/Proyecto%20Integrador/lista.php#"><span class="icon-user-plus"></span> Ingreso</a></li>
+				<li><a href="http://localhost/Proyecto%20Integrador/lista.php#"><span class="icon-user-check"></span> Egreso</a></li>	
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</header>
+<!--FIN de Menu -->
+
+<div class="consulta-div">
+
+<h2>Consulta de Ingreso por Citas</h2>
+
+ <a style="padding: 10px; background: #435B4A; color: #FFFFFF; text-decoration: none; border-radius: 4px;" href="http://localhost/Proyecto%20Integrador/FormProgramado.php" id="n-registro"><span class="icon-plus"></span> Nuevo Registro</a>
+
+<div align="left">
+	<form action="http://localhost/Proyecto%20Integrador/lista.php" method="POST">
+		<b> Nombre: </b><input type="text" id="campo" name="campo" style="padding: 5px;border-radius: 4px;">
+		<input type="submit" name="" id="enviar" value="Buscar" style="padding: 5px; background:#1B515F ; color: #FFFFFF; text-decoration: none; border:none; border-radius: 4px;">
+	</form>
+</div>
+<div class="tb" align="left">
+
+	<table class="tbregistros" border="1" bgcolor="#17202A" cellspacing="0">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nombre</th>
+				<th>Apellidos</th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+<tbody>
+	
+<tr>
+		<td>19</td>
+	<td>Ana</td>
+	<td>Vargas garcia</td>
+					<td style="width:3%;"><a href="http://localhost/Proyecto%20Integrador/ModificarProgramado.php?Id_programado=19"><span class="icon-pencil" style="color: #FFFFFF;"></span></a></td>
+
+				<td style="width:3%;"><a href="http://localhost/Proyecto%20Integrador/EliminarProgramado.php?Id_programado=19"><span class="icon-bin" style="color: #FFFFFF;"></span></a></td>
+</tr>
+	
+<tr>
+		<td>20</td>
+	<td>Migue Angel </td>
+	<td>Cuevas R.</td>
+					<td style="width:3%;"><a href="http://localhost/Proyecto%20Integrador/ModificarProgramado.php?Id_programado=20"><span class="icon-pencil" style="color: #FFFFFF;"></span></a></td>
+
+				<td style="width:3%;"><a href="http://localhost/Proyecto%20Integrador/EliminarProgramado.php?Id_programado=20"><span class="icon-bin" style="color: #FFFFFF;"></span></a></td>
+</tr>
+	
+<tr>
+		<td>21</td>
+	<td>Anabel</td>
+	<td>Vargas garcia</td>
+					<td style="width:3%;"><a href="http://localhost/Proyecto%20Integrador/ModificarProgramado.php?Id_programado=21"><span class="icon-pencil" style="color: #FFFFFF;"></span></a></td>
+
+				<td style="width:3%;"><a href="http://localhost/Proyecto%20Integrador/EliminarProgramado.php?Id_programado=21"><span class="icon-bin" style="color: #FFFFFF;"></span></a></td>
+</tr>
+	
+<tr>
+		<td>22</td>
+	<td>NORKA</td>
+	<td>GARCIA</td>
+					<td style="width:3%;"><a href="http://localhost/Proyecto%20Integrador/ModificarProgramado.php?Id_programado=22"><span class="icon-pencil" style="color: #FFFFFF;"></span></a></td>
+
+				<td style="width:3%;"><a href="http://localhost/Proyecto%20Integrador/EliminarProgramado.php?Id_programado=22"><span class="icon-bin" style="color: #FFFFFF;"></span></a></td>
+</tr>
+	
+<tr>
+		<td>23</td>
+	<td></td>
+	<td></td>
+					<td style="width:3%;"><a href="http://localhost/Proyecto%20Integrador/ModificarProgramado.php?Id_programado=23"><span class="icon-pencil" style="color: #FFFFFF;"></span></a></td>
+
+				<td style="width:3%;"><a href="http://localhost/Proyecto%20Integrador/EliminarProgramado.php?Id_programado=23"><span class="icon-bin" style="color: #FFFFFF;"></span></a></td>
+</tr>
+	</tbody>
+	</table>
+
+</div></div></body></html>

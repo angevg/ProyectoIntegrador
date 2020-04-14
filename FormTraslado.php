@@ -1,3 +1,10 @@
+<?php
+require 'conexion.php';
+$id = $_GET['Id_intrahospitalario'];
+$sql = "SELECT * FROM tingresointrahospitalario WHERE Id_intrahospitalario ='$id' ";
+$resultado = $mysqli->query($sql);
+$row = $resultado->fetch_array(MYSQLI_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -56,36 +63,32 @@
 </header>
 
 <div class="programado-form">
-<form action="POST">
+<form method="POST" action="guardarTraslado.php">
 
 <h2>Egreso por traslado</h2>
-<!--
-<div class="buscar">
-    <input type="search" id="busqueda" name="q">
-    <button>Buscar</button>
-  </div> -->
+
 <div class="left">
-  
-  <label>Nombre:</label> <input type="text" name="">
-   <label>Diagnóstico de egreso:</label> <input type="text" name="">
+   <input type="hidden" id="id" name="id" value="<?php echo $row['Id_intrahospitalario']; ?>" required>
+  <label>Nombre:</label> <input type="text" name="nombre" value="<?php echo $row['I_nombre']; ?>" required>
+   <label>Diagnóstico de egreso:</label> <input type="text" name="diagnostico">
  <label>Condición de egreso: </label>
  <div class="dr1"><label for=peticion> A petición</label><input class="rd" type="radio"  name="condicion" value="peticion"></div>
 	<div class="dr1"><label for=grave> Grave</label><input class="rd" type="radio"  name="condicion" value="grave"></div>
 
 
-<label>Traslado a:</label> <input type="text" name="">
-<label>Cirugías Practicadas:</label> <input type="text" name="">
+<label>Traslado a:</label> <input type="text" name="centro">
+<label>Cirugías Practicadas:</label> <input type="text" name="cirugias">
 
 
   </div>
   
 
   <div class="right">
-    <label>Apellidos:</label> <input type="text" name="">
-  <label>Días de estadia hospitalaria: <input type="number" name=""></label>
-    <label>Recomendaciones:</label> <input type="text" name="">
-    <label>Motivo de traslado:</label> <input type="text" name="">
-     <label>Médico(a) responsable:</label> <input type="text" name="">
+    <label>Apellidos:</label> <input type="text" name="apellidos" value="<?php echo $row['I_apellidos']; ?>" required>
+  <label>Días de estadia hospitalaria: <input type="number" name="dias"></label>
+    <label>Recomendaciones:</label> <input type="text" name="recomendaciones">
+    <label>Motivo de traslado:</label> <input type="text" name="motivo">
+     <label>Médico(a) responsable:</label> <input type="text" name="dr">
 
   </div>
 				<input type="submit" src="#" name="">

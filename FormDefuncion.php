@@ -1,3 +1,10 @@
+<?php
+require 'conexion.php';
+$id = $_GET['Id_emergencia'];
+$sql = "SELECT * FROM tingresoemergencia WHERE Id_emergencia ='$id' ";
+$resultado = $mysqli->query($sql);
+$row = $resultado->fetch_array(MYSQLI_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -58,25 +65,22 @@
 </header>
 
 <div class="programado-form">
-<form action="POST">
+<form action="guardarDefuncion.php" method="POST">
 
 <h2>Egreso por defunción</h2>
-<!--
-<div class="buscar">
-    <input type="search" id="busqueda" name="q">
-    <button>Buscar</button>
-  </div> -->
+
 <div class="left">
-  <label>Nombre:</label> <input type="text" name="">
-   <label>Causas de defunción:</label> <input type="text" name="">
-<label>Cirugías Practicadas:</label> <input type="text" name="">
+	  <input type="hidden" id="id" name="id" value="<?php echo $row['Id_emergencia']; ?>" required>
+  <label>Nombre:</label> <input type="text" name="nombre" value="<?php echo $row['E_nombre']; ?>" required>
+   <label>Causas de defunción:</label> <input type="text" name="causa" >
+<label>Cirugías Practicadas:</label> <input type="text" name="cirugias">
   </div>
   
 
   <div class="right">
-    <label>Apellidos:</label> <input type="text" name="">
-  <label>Días de estadia hospitalaria: <input type="number" name=""></label>
-    <label>Médico(a) responsable:</label> <input type="text" name="">
+    <label>Apellidos:</label> <input type="text" name="apellidos" value="<?php echo $row['E_apellidos']; ?>" required>
+  <label>Días de estadia hospitalaria: <input type="number" name="dias"></label>
+    <label>Médico(a) responsable:</label> <input type="text" name="dr">
   </div>
 				<input type="submit" name="">
 				<input type="reset" name="">
